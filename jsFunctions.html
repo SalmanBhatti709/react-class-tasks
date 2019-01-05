@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+ 
+</body>
+
+
+
+<!-- javascript starts here -->
+
+
+<script> 
+ 
+//task 1
+
+var a,b,result;
+function setValues() {
+
+a = Number(document.getElementById("aa").value);
+b = Number(document.getElementById("bb").value);
+
+}
+
+
+function sum() {
+
+    setValues();
+     result = a + b;
+     alert("the sum is equal to " +result );
+
+}
+
+
+function subt() {
+
+setValues();
+ result = a - b;
+ alert("the subtraction is equal to " +result );
+
+}
+
+
+function mult() {
+
+setValues();
+ result = a * b;
+ alert("the multiply is equal to " +result );
+
+}
+
+
+function div() {
+
+setValues();
+ result = a / b;
+ alert("the division is equal to " +result );
+
+}
+
+
+//Task2
+
+function counting(n1,n2,ope){
+ var n1=+prompt("Enter a start number");
+ var n2=+prompt("Enter a end number");
+
+ for(var i=n1;i<=n2;i++){
+ document.write(i+"<br/>");
+
+ }
+ }
+counting();
+
+
+
+
+//Task3
+function age() { var birthYear = 1996;
+var currentyear  = 2018;
+var age  = currentyear - birthYear;
+console.log('I will be either ' + age + ' or ' + (age - 1));}
+age();
+
+
+//Task4
+
+
+function date_time(){
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    document.write("<b>Current date = </b>"+date);
+    var identifier="am";
+    var today = new Date();
+    var hours=today.getHours();
+    if((today.getHours())>12){
+     hours=today.getHours()-12;
+     identifier="pm";
+    }
+    var time = hours + ":" + today.getMinutes() + " " + identifier;
+    document.write("<br/><b>Current time = </b>"+time);
+    }
+    date_time();
+
+//Task5
+
+function dice(){
+    var no= Math.floor((Math.random() * 6) + 1);
+    document.getElementById("para").innerHTML="No On The Dice = "+no;
+   }
+
+
+//Task6
+
+function factorial(n1,n2,ope){
+ var n=+prompt("Enter a number");
+ var fact=1;
+ for(var i=1;i<=n;i++){
+ fact=fact*i;
+ }
+ document.write("Factorial of "+n +" is "+ fact);
+ }
+factorial();
+
+//Task7
+
+function geometrizer() {
+    var radius = 3;
+var circumference = Math.PI * 2*radius;
+console.log("The circumference is " + circumference);
+var area = Math.PI * radius*radius;
+console.log("The area is " + area);
+ }
+
+geometrizer();
+
+
+//Task8
+
+
+function largestNo() {
+ var largestNo = arguments[0];
+ for (var i = 1; i < arguments.length; i++){
+ if(largestNo<arguments[i]){
+ largestNo = arguments[i]; }
+}
+ return(largestNo);
+}
+console.log(largestNo(7,5,6,4));
+
+//Task9
+
+function largestElement(myString){
+var splits = myString.split(' ');
+var largest=splits[0].length;
+var largest_element=splits[0];
+for(var i=1;i<splits.length;i++){
+ if(largest<splits[i].length){
+ largest=splits[i].length;
+ largest_element=splits[i];
+ }
+}
+ document.write(largest_element);
+}
+largestElement("Web Development Tutorial");
+
+
+
+//Task10
+
+function palindrome(){
+ var word=prompt("Enter a word");
+ var k=1;
+ if(word.length%2==0){
+ len=word.length/2;
+ }
+ else{
+ len=(word.length/2)-0.5;
+ }
+ for( var i=0;i<=len && k==1;i++){
+ if(word[i]==word[word.length-(i+1)]){
+ k=1;
+ }
+ else{
+ document.write(word+" is not palindrome because "+word[i]+" and "+
+word[word.length-(i+1)]+" doesn't matches");
+ k=0;
+ }
+}
+ if(k==1){
+ document.write(word+" is palindrome");
+ }
+
+}
+palindrome();
+
+
+//Task11
+function titleCase(str) {
+ var splitStr = str.toLowerCase().split(' ');
+ for (var i = 0; i < splitStr.length; i++) {
+ // You do not need to check if i is larger than splitStr length, as your
+//for does that for you
+ // Assign it back to the array
+ splitStr[i] = splitStr[i].charAt(0).toUpperCase() +
+splitStr[i].substring(1);
+ }
+ // Directly return the joined string
+ return splitStr.join(' ');
+}
+console.log(titleCase("I'm a little tea pot"));
+
+//Task12
+
+function calculateSupply(){
+  var myAge=document.getElementById('myAge').value;
+  var maxAge=100;
+  var cupsAmount= document.getElementById('myTea').value; 
+  var totalSupply=(cupsAmount * 365) * (maxAge - myAge); 
+  var result= document.getElementById('leftCups').value=totalSupply; 
+}
+
+//Task13
+
+function temp() {
+var celsius = 30;
+var celsiusInF = (celsius*9)/5 + 32;
+console.log(celsius + '°C is ' + celsiusInF + '°F');
+var fahrenheit = 20;
+var fahrenheitInC = ((fahrenheit - 32)*5)/9;
+console.log(fahrenheit + '°F is ' + fahrenheitInC + '°C'); }
+
+temp();
+
+
+
+
+
+</script>
+
+</html>
